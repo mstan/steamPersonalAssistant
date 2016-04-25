@@ -1,0 +1,18 @@
+{
+  "name": "steamchatbot",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "steam-totp": "^1.3.0",
+    "steam-user": "^3.3.4",
+    "winston": "^2.2.0",
+    "winston-syslog": "^1.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
