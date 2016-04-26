@@ -2,7 +2,7 @@ var config = require('./config.js');
 
 //admin panel messages
 var adminPanel = {
-    "invalidStatus": 'That isn\'t a valid status',
+    "invalidStatus": 'ERROR: Invalid status',
 }
 
 //user panel messages
@@ -21,7 +21,7 @@ var userCommandsHelp = {
 
 var registeredUsers = {
     "Gamemaster": '76561198015034340',
-    "Aeronaut": 'blank'
+    "User": '1'
 }
 
 module.exports = {

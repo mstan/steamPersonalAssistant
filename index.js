@@ -37,6 +37,8 @@ client.on('error', function(e) {
 //If a message is received
 client.on('friendMessage', function(steamID,message) {
 
+    logger.log('info', 'Received message from ' + steamID + ' : ' + message);    
+
     if (steamID.toString() == config.ownerSteamURLID.toString()) {
         adminPanel.run(SteamUser,steamID,message);
     } else {
