@@ -1,17 +1,17 @@
 //Dependencies
 var SteamUser = require('steam-user'); // Steam Bot app
 var SteamTotp = require('steam-totp'); // Steam mobile authenticator handler
-var logger = require('./lib/winston');
 //var winston = require('winston');
 
 //Declarations
 var client = new SteamUser(); //make a new "user instance"
-exports.client = client;
+exports.client = client; //Export this so other js files can use it
 
 //Personal Modules
 var config = require('./config.js');
 var adminPanel =  require('./lib/adminPanel.js');
 var userPanel = require('./lib/userPanel.js');
+var logger = require('./lib/winston'); 
 
 logger.log('info', 'Starting Steam Bot Handler...');
 logger.log('info', 'This bot\'s owner is ' + config.ownerName);
@@ -45,6 +45,5 @@ client.on('friendMessage', function(steamID,message) {
         userPanel.run(SteamUser,steamID,message);
       //client.chatMessage(steamID, 'Welcome to ' + config.ownerName + '\'s chat bot! What would you like me to do?');
     }
-
 });
 

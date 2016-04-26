@@ -1,6 +1,6 @@
 {
-  "name": "steamchatbot",
-  "version": "0.0.1",
+  "name": "steamPersonalAssisstant",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "dependencies": {
