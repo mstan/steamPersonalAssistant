@@ -24,10 +24,16 @@ var userPanel = {
     "defaultMessage": 'Welcome to ' + config.ownerName + '\'s chat bot! \n \n' +
                       'Sorry! I didn\'t quite know what to do with your message, ' +
                       'but if you type "help", I\'ll give you a list of commands that I know! \n \n' +
-                      'You can also type help: <COMMAND> to get more information about that command!'
+                      'You can also type help: <COMMAND> to get more information about that command!',
+    "userNotFound":   'ERROR: User not found!', 
 }
 
 //help commands
+
+var adminCommandsHelp = {
+
+}
+
 var userCommandsHelp = {
     "add user":     'Add a user by their steam ID \n \n' +
                     '[USAGE] add user: <STEAM ID> \n \n' +
@@ -51,11 +57,26 @@ var userCommandsHelp = {
                      'Available statuses: Online, Busy, Looking To Play, Looking To Trade, Snooze, Offline*' +
                      'NOTE: Offline is full sign out. This is not equivalent to appearing offline \n \n' +
                      '[USAGE] set status: <STATUS> \n \n' +
-                     '[EXAMPLE] set status: busy'
+                     '[EXAMPLE] set status: busy',
+
+    "@<user>":       'Message a pre-registered user by their registered name. \n \n' +
+                     '[USAGE] @<USER>: <MESSAGE> +\n \n' +
+                     '[EXAMPLE] @Gamemaster: Hello!'
+}
+
+
+var infoRequests = {
+    //info
+    "owner":   'Information for ' + config.ownerName + '\n' + 
+               'STEAM ID is ' + config.ownerSteamID + '\n' +
+               '64-bit ID is ' + config.ownerSteamURLID
+    //Users can add their own custom info here as new k/v pairs
 }
 
 module.exports = {
     adminPanel: adminPanel,
     userPanel: userPanel,
-    userCommandsHelp: userCommandsHelp
+    userCommandsHelp: userCommandsHelp,
+
+    infoRequests: infoRequests
 }
