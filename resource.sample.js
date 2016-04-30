@@ -31,10 +31,6 @@ var userPanel = {
 //help commands
 
 var adminCommandsHelp = {
-
-}
-
-var userCommandsHelp = {
     "add user":     'Add a user by their steam ID \n \n' +
                     '[USAGE] add user: <STEAM ID> \n \n' +
                     '[EXAMPLE] add user: STEAM_0:0:27384306',
@@ -57,11 +53,18 @@ var userCommandsHelp = {
                      'Available statuses: Online, Busy, Looking To Play, Looking To Trade, Snooze, Offline*' +
                      'NOTE: Offline is full sign out. This is not equivalent to appearing offline \n \n' +
                      '[USAGE] set status: <STATUS> \n \n' +
-                     '[EXAMPLE] set status: busy',
+                     '[EXAMPLE] set status: busy'
+}
 
+var userCommandsHelp = {
     "@<user>":       'Message a pre-registered user by their registered name. \n \n' +
                      '[USAGE] @<USER>: <MESSAGE> +\n \n' +
-                     '[EXAMPLE] @Gamemaster: Hello!'
+                     '[EXAMPLE] @Gamemaster: Hello!',
+
+    "!<info>":       'Provides information and responses to passed parameters. \n' +
+                     '[PARAMETERS] owner,mumble (and maybe a few special hidden ones \n' +
+                     '[USAGE] !<info> \n' +
+                     '[EXAMPLE] !mumble'
 }
 
 
