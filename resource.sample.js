@@ -71,8 +71,8 @@ var userCommandsHelp = {
 var infoRequests = {
     //info
     "owner":     'Information for ' + config.ownerName + '\n' + 
-                 'STEAM ID is ' + config.ownerSteamID + '\n' +
-                 '64-bit ID is ' + config.ownerSteamURLID,
+                 'STEAM ID is ' + config.ownerSteamID32 + '\n' +
+                 '64-bit ID is ' + config.ownerSteamID64,
     "arrayTest": ['Return Item 1', 
                   'Return Item 2'] 
     //Users can add their own custom info here as new k/v pairs

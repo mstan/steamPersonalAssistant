@@ -39,7 +39,7 @@ client.on('friendMessage', function(steamID,message) {
 
     logger.log('info', 'Received message from ' + steamID + ' : ' + message);    
 
-    if (steamID.toString() == config.ownerSteamURLID.toString()) {
+    if (steamID.toString() == config.ownerSteamID64.toString()) {
         adminPanel.run(SteamUser,steamID,message);
     } else {
         userPanel.run(SteamUser,steamID,message);
