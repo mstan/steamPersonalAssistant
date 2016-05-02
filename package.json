@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "steam-id-convertor": "^1.0.1",
     "steam-totp": "^1.3.0",
     "steam-user": "^3.3.4",
     "steamidconvert": "^0.2.4",
@@ -15,6 +14,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Matthew Stanley",
   "license": "ISC"
 }

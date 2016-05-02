@@ -8,7 +8,7 @@ var client = new SteamUser(); //make a new "user instance"
 exports.client = client; //Export this so other js files can use it
 
 //Personal Modules
-var config = require('./config.js');
+var config = require('./config/config.js');
 var adminPanel =  require('./lib/adminPanel.js');
 var userPanel = require('./lib/userPanel.js');
 var logger = require('./lib/winston'); 
