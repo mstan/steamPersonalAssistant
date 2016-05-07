@@ -25,8 +25,9 @@ client.logOn({
 
 //Once logged in
 client.on('loggedOn', function(details) {
-    console.log("Logged into steam as " + client.steamID.getSteam3RenderedID());
+    logger.log('info', 'Logged into steam as ' + client.steamID.getSteam3RenderedID());
     client.setPersona(SteamUser.Steam.EPersonaState.Online);
+
 });
 
 //If there's an error
