@@ -1,7 +1,6 @@
 //Dependencies
 var SteamUser = require('steam-user'); // Steam Bot app
 var SteamTotp = require('steam-totp'); // Steam mobile authenticator handler
-//var winston = require('winston');
 
 //Declarations
 var client = new SteamUser(); //make a new "user instance"
@@ -31,20 +30,22 @@ client.on('loggedOn', function(details) {
 });
 
 //If there's an error
-client.on('error', function(e) {
-    console.log(e);
+client.on('error', function(err) {
+    logger.log(err);
 });
+
+//On friend request, auto-add
 
 //If a message is received
 client.on('friendMessage', function(steamID,message) {
-
     logger.log('info', 'Received message from ' + steamID + ' : ' + message);    
 
+    //Is the ID of our user an administrator/owner? Run the admin case
     if (steamID.toString() == config.ownerSteamID64.toString()) {
         adminPanel.run(SteamUser,steamID,message);
     } else {
+    //They weren't! user case!
         userPanel.run(SteamUser,steamID,message);
-      //client.chatMessage(steamID, 'Welcome to ' + config.ownerName + '\'s chat bot! What would you like me to do?');
     }
 });
 
