@@ -26,20 +26,29 @@ client.logOn({
 client.on('loggedOn', function(details) {
     logger.log('info', 'Logged into steam as ' + client.steamID.getSteam3RenderedID());
     client.setPersona(SteamUser.Steam.EPersonaState.Online);
-
 });
+
+//Send a friend request
+client.on('friendRelationship', function(steamID,relationship) {
+    if(relationship == SteamUser.Steam.EFriendRelationship.RequestRecipient) {
+        client.addFriend(steamID);
+    }
+    logger.log('info', 'Friend Request from ' + steamID);
+});
+
+/*
+client.on('groupEvent', function (sid,headline,date,gid,gameID) {
+    //Handle group events here?
+});
+*/
 
 //If there's an error
 client.on('error', function(err) {
-    logger.log(err);
+    logger.log('info', err);
 });
-
-//On friend request, auto-add
-
 //If a message is received
 client.on('friendMessage', function(steamID,message) {
     logger.log('info', 'Received message from ' + steamID + ' : ' + message);    
-
     //Is the ID of our user an administrator/owner? Run the admin case
     if (steamID.toString() == config.ownerSteamID64.toString()) {
         adminPanel.run(SteamUser,steamID,message);

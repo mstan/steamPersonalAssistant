@@ -1,6 +1,6 @@
 {
   "name": "steamPersonalAssisstant",
-  "version": "0.1.3",
+  "version": "0.11.3",
   "description": "",
   "main": "index.js",
   "dependencies": {
