@@ -36,6 +36,7 @@ client.on('friendRelationship', function(steamID,relationship) {
     logger.log('info', 'Friend Request from ' + steamID);
 });
 
+
 /*
 client.on('groupEvent', function (sid,headline,date,gid,gameID) {
     //Handle group events here?

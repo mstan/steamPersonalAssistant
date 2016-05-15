@@ -77,17 +77,10 @@ var infoRequests = {
                      '64-bit ID is ' + config.ownerSteamID64 + '\n' +
                      'Profile URL: ' + 'http://steamcommunity.com/profiles/' + config.ownerSteamID64,
 
-    "mumble":        'Mumble information for VictoryPit gaming is \n' +
+    "mumble":        'Mumble information is \n' +
                      'IP: ' + info.mumble.ip + '\n' +
                      'Port: ' + info.mumble.port + '\n' +
                      'Password: ' + info.mumble.password,
-
-    "comp":          'connect ' + info.competitiveServerTF2.ip + ':' + info.competitiveServerTF2.port +
-                     '; password ' + info.competitiveServerTF2.password + '\n \n' +
-                     'steam://connect/' + info.competitiveServerTF2.ip + '/' + info.competitiveServerTF2.password,
-
-    "stv":           'connect ' + info.competitiveServerTF2.ip + ':' + info.competitiveServerTF2.portSTV + '\n' +
-                     'steam://connect/' + info.competitiveServerTF2.ip + '/'
 }
 
 module.exports = {
