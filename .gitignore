@@ -3,3 +3,6 @@ config.js
 resource.js
 users.js
 info.js
+lib/database
+config/db.js
+.DS_Store

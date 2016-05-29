@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "mongodb": "^2.1.19",
+    "mongoose": "^4.4.19",
     "steam-totp": "^1.3.0",
     "steam-user": "^3.3.4",
     "steamidconvert": "^0.2.4",

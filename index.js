@@ -26,6 +26,7 @@ client.logOn({
 client.on('loggedOn', function(details) {
     logger.log('info', 'Logged into steam as ' + client.steamID.getSteam3RenderedID());
     client.setPersona(SteamUser.Steam.EPersonaState.Online);
+
 });
 
 //Send a friend request
@@ -35,7 +36,6 @@ client.on('friendRelationship', function(steamID,relationship) {
     }
     logger.log('info', 'Friend Request from ' + steamID);
 });
-
 
 /*
 client.on('groupEvent', function (sid,headline,date,gid,gameID) {
